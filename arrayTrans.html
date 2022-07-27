@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+     <h1>Array transversing and accessing</h1>
+
+     <input   type="text" id="element"> 
+     <button onclick="getElement()">getvalue</button><br><br>
+</body>
+</html>
+<script>
+//  transversing
+let data=[3,4,56,3,6,736,7,845,36,785,9,0,7,10];
+
+for( var i=0; i<data.length; i++)
+{
+    // document.write(data[i]," ");
+
+    document.write(` array  ${i} element  is  ${data[i]} <br>`)
+}
+// accessing 
+
+// let x=8;
+
+// document.write(data[x]);
+
+function getElement() {
+  
+    let el=document.getElementById('element').value;
+
+    alert(data[el]);
+
+    if( el < data.lenght && el >=0  && typeof parseInt(el) ==="number"  )
+    {
+        alert(data[el]);  
+    }
+    else if(el == null)
+    {
+        alert("input is invalid")
+    }
+    else{
+        alert("plese fill valid input ");
+    }
+   
+}
+
+
+</script>
